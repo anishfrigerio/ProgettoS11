@@ -1,0 +1,31 @@
+<!-- netflix -->
+
+<div class="container">
+  <h1 class="text-danger mt-5">Accedi</h1>
+</div>
+
+<div class="container mt-3 d-flex justify-content-center ">
+  <div class="row">
+
+    <div class="col">
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="p-5">
+
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label text-danger">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+            ngModel required email>
+          <div id="emailHelp" class="form-text text-danger">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label text-danger">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-danger mb-2" [disabled]="!loginForm.valid"> Submit</button>
+        <div>
+          <a [routerLink]="'/register'" class="text-danger text-decoration-none mt-2">registrati</a>
+        </div>
+
+      </form>
+    </div>
+
